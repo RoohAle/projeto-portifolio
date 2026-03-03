@@ -7,7 +7,54 @@
   --destaque-inverso
   --fundo-card
 */
-body{
-  background-color: lightblue;
-  color: blue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fundo-principal: #f5f5f5;
+  --texto: #222222;
+  --texto-inverso: #ffffff;
+  --destaque: #0077ff;
+  --destaque-inverso: #66bbff;
+  --fundo-card: #ffffff;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5em; /* tamanho da letra, base é 1*/
+  background-color: var(--fundo-principal);
+  color: var(--texto);
+  
+}
+
+header {
+  background-color: var(--destaque);
+  color: var(--texto);
+  padding: 10px;
+  display: flex; /* para pode usar os alinhamentos*/
+  justify-content: flex-end;/* coloca os itens ao fins do eixo horizontal*/
+  align-content: center; /* alinha os itens centralizado dentro no eixo horizontal*/
+}
+
+nav#menu ul { /* usa o # para ID*/
+  list-style: none; /* tira as bolinhas da lista UL */
+  display: flex; /*organiza dentro da div os itens lado a lado */
+  gap: 10px; /* espaço entre os itens*/
+}
+
+nav#menu a {
+  text-decoration: none; /* tira sublinhado*/
+  color: var(--destaque-inverso);
+  font-weight: 600;
+  padding: 12px 15px;
+  border-radius: 5px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+nav#menu a:hover {
+  background-color: var(--destaque-inverso);
+  color: var(--destaque);
 }
